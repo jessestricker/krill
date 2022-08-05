@@ -25,3 +25,14 @@ jobs:
       - uses: Swatinem/rust-cache@v2
 
       - run: cargo clippy --all-targets --locked --verbose -- --deny warnings
+
+  format:
+    name: Format
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: dtolnay/rust-toolchain@stable
+        with: { components: rustfmt }
+      - uses: Swatinem/rust-cache@v2
+
+      - run: cargo fmt --check --all --verbose -- --verbose
