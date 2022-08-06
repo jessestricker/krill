@@ -1,6 +1,8 @@
 [package]
 name = "krill"
 version = "0.1.0"
+authors = ["Jesse Stricker"]
 edition = "2021"
 rust-version = "1.56"
+description = "A just-for-fun functional language experiment."
 license = "MIT"
